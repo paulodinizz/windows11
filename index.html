@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body id="body">
+    <div class="taskbar">
+        <div class="taskbarColor"></div>
+        <div class="taskbarMain">
+            <div class="taskbarCenter">
+                <img id="start" class="clicked" src="./assets/taskbar/start-menu.svg" alt="">
+                <img class="clicked" src="./assets/taskbar/search.svg" alt="">
+                <img class="clicked" src="./assets/taskbar/Windows_Explorer_Icon.svg" alt="">
+                <img class="clicked" src="./assets/taskbar/microsoft-edge-new-2020-seeklogo.com-2.svg" alt="">
+                <img class="clicked" src="./assets/taskbar/store.svg" alt="">
+                <img class="clicked" src="assets/Apps/discord.svg" alt="">
+                <img class="clicked" src="./assets/Apps/code.svg" alt="">
+
+                <div class="right-taskbar">
+                    <img class="white-img" src="./assets/taskbar/right/arrow.svg">
+                    <img class="white-img" src="./assets/taskbar/right/ethernet.svg">
+                    <img class="white-img" src="./assets/taskbar/right/Speaker_Icon.svg">
+                    <div class="date" title="quarta-feira, 7 de dezembro de 2022">
+                        <p>15:46</p>
+                        <p>07/12/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup jPop">
+            <div class="popupColor"></div>
+            <div class="popupMain">
+                <!-- Search-box -->
+                <div class="search-box">
+                    <input id="search-box" placeholder="Digite aqui para pesquisar" type="text">
+                </div>
+
+                <!-- apps -->
+                <div class="apps">
+                    <div class="pinned">Fixado</div>
+                    <div class="allApps easyDoesIt">Todos os aplicativos<span style="font-size: 16px; margin-left:15px">></span></div>
+                </div>
+
+                <!-- apps -->
+                <div class="recApps">
+                    <div class="appImg center easyDoesIt">
+                        <img src="./assets/taskbar/microsoft-edge-new-2020-seeklogo.com-2.svg">
+                        <p class="recAppName">Edge</p>
+                    </div>
+                    <div class="appImg center easyDoesIt">
+                        <img src="./assets/Apps/settings.svg">
+                        <p class="recAppName">Configurações</p>
+                    </div>
+                    <div class="appImg center easyDoesIt">
+                        <img src="./assets/taskbar/Windows_Explorer_Icon.svg">
+                        <p class="recAppName">Explorador de Arquivos</p>
+                    </div>
+                </div>
+
+                <!-- recommended -->
+                <div class="recommended">
+                    <div class="pinned">Recomendações</div>
+                    <div class="allApps">Mais<span style="font-size: 16px; margin-left:15px">></span></div>
+                </div>
+
+                <!-- recent -->
+                <div class="recent">
+                    <div class="recOpened hover easyDoesIt">
+                        <img src="./assets/Apps/code.svg">
+                        <div class="recOpenedName">
+                            <p class="fileName">Teste</p>
+                            <p class="openDate">Today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="profile">
+                        <div class="username">
+                            <div class="userImg">
+                                <img src="./assets/user.jpg">
+                            </div>
+                            <p class="myName" style="font-weight: 500; cursor: default;">Paulo Diniz</p>
+                        </div>
+                        
+                        <div class="power" style="right: 0%; position: relative;">
+                            <img id="p-btn" style="cursor: pointer;" src="./assets/power.svg">
+                            <div class="power-menu">
+                                <div style="display: inline;" class="hover">
+                                    <img style="cursor: pointer; float: left; padding-right: 5px; padding-left: 2px; padding-top: 8px; width: 25px;" src="./assets/settings.svg">
+                                    <p class="nada">Opções de entrada</p>
+                                </div>
+                                <hr width="100%" size="1px" style="margin-bottom: 5px; margin-top: 5px;">
+                                <div style="display: inline;" class="hover">
+                                    <img style="cursor: pointer; float: left; padding-right: 5px; padding-left: 2px; padding-top: 8px; width: 25px;" src="./assets/sleep.svg">
+                                    <p class="nada">Suspender</p>
+                                </div>
+                                <div style="display: inline;" class="hover">
+                                    <img style="cursor: pointer; float: left; padding-right: 5px; padding-left: 2px; padding-top: 8px; width: 25px;" src="./assets/power.svg">
+                                    <p class="nada">Desligar</p>
+                                </div>
+                                <div style="display: inline;" class="hover">
+                                    <img style="cursor: pointer; float: left; padding-right: 5px; padding-left: 2px; padding-top: 8px; width: 25px;" src="./assets/restart.svg">
+                                    <p class="nada">Reiniciar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
