@@ -11,6 +11,8 @@
     --task-height: 5vh;
     --popup-height: 82vh;
     --popup-width: 40%;
+    --vscode-height: 97vh;
+    --vscode-width: 100%;
     --textColor: #cdd0d4;
     --backColor: rgba(38, 38, 38, 0.56);
     --hovColor: rgba(101, 101, 101, 0.233);
@@ -97,11 +99,12 @@ body{
 }
 .popup{
     position: absolute;
-    top: 80%;
+    top: 100%;
     left: 0%;
     height: 100%;
     width: 100%;
     transition: all .2s ease-in-out;
+    z-index: 1000;
 }
 .popupMain,
 .popupColor{
@@ -124,6 +127,32 @@ body{
 }
 
 .popActive{
+    position: absolute;
+    top: -3%;
+    left: 0%;
+}
+
+.vscode{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.vscodeMain{
+    position: absolute;
+    height: var(--vscode-height);
+    width: var(--vscode-width);
+    border-radius: 8px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    background-color: #191622;
+}
+
+.vscodeActive{
     position: absolute;
     top: -3%;
     left: 0%;
@@ -251,7 +280,7 @@ body{
 }
 
 .fileName,
-.myName{
+.accountName{
     font-size: 13px;
     padding-bottom: 5px;
 }

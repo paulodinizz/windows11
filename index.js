@@ -1,10 +1,17 @@
 let startMenu = document.getElementById('start');
+let startCode = document.getElementById('startCode');
 let body = document.getElementById('body');
 
 startMenu.addEventListener('click', function () {
     document.querySelector('.popup').classList.toggle("popActive");
     document.querySelector('.clicked').classList.toggle("hovActive");
 })
+
+startCode.addEventListener('click', function () {
+    document.querySelector('.vscode').classList.toggle("vscodeActive");
+    document.querySelector('.clickedVscode').classList.toggle("hovActive");
+})
+
 
 let search = document.getElementById('search-box');
 search.addEventListener('input', function () {

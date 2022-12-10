@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows 11</title>
+    <link rel="stylesheet" href="./styles/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/vscode.css">
 </head>
 
 <body id="body">
@@ -20,7 +22,7 @@
                 <img class="clicked" src="./assets/taskbar/microsoft-edge-new-2020-seeklogo.com-2.svg" alt="">
                 <img class="clicked" src="./assets/taskbar/store.svg" alt="">
                 <img class="clicked" src="assets/Apps/discord.svg" alt="">
-                <img class="clicked" src="./assets/Apps/code.svg" alt="">
+                <img id="startCode" class="clickedVscode" src="./assets/Apps/code.svg" alt="">
 
                 <div class="right-taskbar">
                     <img class="white-img" src="./assets/taskbar/right/arrow.svg">
@@ -33,45 +35,36 @@
                 </div>
             </div>
         </div>
-        <div class="popup jPop">
+        <div class="popup">
             <div class="popupColor"></div>
             <div class="popupMain">
-                <!-- Search-box -->
                 <div class="search-box">
                     <input id="search-box" placeholder="Digite aqui para pesquisar" type="text">
                 </div>
-
-                <!-- apps -->
                 <div class="apps">
                     <div class="pinned">Fixado</div>
-                    <div class="allApps easyDoesIt">Todos os aplicativos<span style="font-size: 16px; margin-left:15px">></span></div>
+                    <div class="allApps">Todos os aplicativos<span style="font-size: 16px; margin-left:15px">></span></div>
                 </div>
-
-                <!-- apps -->
                 <div class="recApps">
-                    <div class="appImg center easyDoesIt">
+                    <div class="appImg">
                         <img src="./assets/taskbar/microsoft-edge-new-2020-seeklogo.com-2.svg">
                         <p class="recAppName">Edge</p>
                     </div>
-                    <div class="appImg center easyDoesIt">
+                    <div class="appImg">
                         <img src="./assets/Apps/settings.svg">
                         <p class="recAppName">Configurações</p>
                     </div>
-                    <div class="appImg center easyDoesIt">
+                    <div class="appImg">
                         <img src="./assets/taskbar/Windows_Explorer_Icon.svg">
                         <p class="recAppName">Explorador de Arquivos</p>
                     </div>
                 </div>
-
-                <!-- recommended -->
                 <div class="recommended">
                     <div class="pinned">Recomendações</div>
                     <div class="allApps">Mais<span style="font-size: 16px; margin-left:15px">></span></div>
                 </div>
-
-                <!-- recent -->
                 <div class="recent">
-                    <div class="recOpened hover easyDoesIt">
+                    <div class="recOpened hover">
                         <img src="./assets/Apps/code.svg">
                         <div class="recOpenedName">
                             <p class="fileName">Teste</p>
@@ -85,9 +78,8 @@
                             <div class="userImg">
                                 <img src="./assets/user.jpg">
                             </div>
-                            <p class="myName" style="font-weight: 500; cursor: default;">Paulo Diniz</p>
+                            <p class="accountName" style="font-weight: 500; cursor: default;">Paulo Diniz</p>
                         </div>
-                        
                         <div class="power" style="right: 0%; position: relative;">
                             <img id="p-btn" style="cursor: pointer;" src="./assets/power.svg">
                             <div class="power-menu">
@@ -112,6 +104,113 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="vscode">
+            <div class="vscodeMain">
+                <header>
+                    <div class="container">
+                        <div class="icon"></div>
+                        <ul>
+                            <li>Arquivo</li>
+                            <li>Editar</li>
+                            <li>Seleção</li>
+                            <li>Ver</li>
+                            <li>Acessar</li>
+                            <li>Executar</li>
+                            <li>Terminal</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </div>
+                    <div class="namespace">helloWorld.html - Visual Studio Code</div>
+                    <div class="options">
+                        <div class="minimize">
+                            <div class="line"></div>
+                        </div>
+                        <div class="maximize">
+                            <div class="cube"></div>
+                        </div>
+                        <div class="closed">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="list-files">
+                        <ul>
+                            <li class="tab-files active">
+                                <svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m12 17.56l4.07-1.13.55-6.1h-7.24l-.18-2.03h7.6l.2-1.99h-10l.56 6.01h6.89l-.23 2.58-2.22.6-2.22-.6-.14-1.66h-2l.29 3.19 4.07 1.13m-7.93-14.56h15.86l-1.43 16.2-6.5 1.8-6.5-1.8-1.43-16.2z"
+                                        fill="#e44d26" />
+                                </svg>
+                                <span>helloWorld.html</span>
+                                <div class="closed">
+                                    <div class="line1"></div>
+                                    <div class="line2"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="file-open" style="display: block;">
+                        <div class="content">
+                            <p>!<span class="tag">DOCTYPE</span> <span class="attribute">html</span></p>
+                            <p>&lt<span class="tag">html</span> <span class="attribute">lang</span><span class="tag">=</span><span class="text">"en"</span>&gt</p>
+                            <br>
+                            <p>&lt<span class="tag">head</span>&gt</p>
+                            <div class="childrenTag">
+                                <p>&lt<span class="tag">meta</span> <span class="attribute">charset</span><span class="tag">=</span> <span class="text">"UTF-8"</span>&gt</p>
+                                <p>&lt<span class="tag">meta</span> <span class="attribute">http-equiv</span><span class="tag">=</span> <span class="text">"X-UA-Compatible"</span> <span class="attribute">content</span><span class="tag">=</span><span class="text">"IE=edge"</span>&gt</p>
+                                <p>&lt<span class="tag">meta</span> <span class="attribute">name</span><span class="tag">=</span> <span class="text">"viewport"</span> <span class="attribute">content</span><span class="tag">=</span> <span class="text">"width=device-width, initial-scale=1.0"</span></p>
+                                <p>&lt<span class="tag">title</span>&gthelloWorld&lt/<span class="tag">title</span>&gt</p>
+                            </div>
+                            <p>&lt/<span class="tag">head</span>&gt</p>
+                            <br>
+                            <p>&lt<span class="tag">body</span>&gt</p>
+                            <div class="childrenTag">
+                                <p>&lt<span class="tag">h1</span>&gt Hello World &lt/<span class="tag">h1</span>&gt</p>
+                            </div>
+                            <p>&lt/<span class="tag">body</span>&gt</p>
+                            <p>&lt/<span class="tag">html</span>&gt</p>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div class="container">
+                        <div class="testeee" style="display: inline;">
+                            <div class="icon" style="float: left;"></div>
+                            <ul>
+                                <li>master*</li>
+                            </ul>
+                        </div>
+                        <div class="testeee" style="display: inline; margin-left: 30px;">
+                            <div class="iconProhibited" style="float: left;"></div>
+                            <ul>
+                                <li>0</li>
+                            </ul>
+                        </div>
+                        <div class="testeee" style="display: inline; margin-left: 30px;">
+                            <div class="iconWarn" style="float: left;"></div>
+                            <ul>
+                                <li>0</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="rightText">
+                            <p>Spaces: 4</p>
+                        </div>
+                        <div class="rightText">
+                            <p>UTF-8</p>
+                        </div>
+                        <div class="rightText">
+                            <p>LF</p>
+                        </div>
+                        <div class="rightText">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
